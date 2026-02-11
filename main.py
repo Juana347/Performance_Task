@@ -9,19 +9,25 @@ def intro():
 
 intro()
 
-def lists():
+def lists(to_do_list):
     answer = input("Is there anything you want to add or remove? (yes/no) ")
     if answer == "yes":
         ans = input('Add or remove? ')
-        if ans == 'add' or 'Add':
-            input('What would you like to add? ')
+        while ans == 'add' or 'Add':
+            a = input('What would you like to add?: ') 
+            to_do_list.append(a)
+            print(to_do_list)
+            input('Do you want to add something else? ')
+            if 'yes' or 'Yes':
+                continue
+            break
     else:
         print("Make sure to finish your current tasks and come back when you finish one to update your list!")
 
 
-lists()
+lists(to_do_list)
 
 
 
 
-def add_remove(to_do_list):
+# def add_remove(to_do_list):
