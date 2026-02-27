@@ -37,7 +37,7 @@ def remove():
                 print('Great job. You finished your tasks.')
                 break
     # Asks the user if they want to remove something else or if they want to add something to the list
-        n = input('Do you want to remove something else? (if you want to add something say "add") ').lower()
+        n = input('Do you want to remove something else? (yes/no) (if you want to add something say "add") ').lower()
     # If the user wants to keep removing items from the list, the loop continues
         if n == 'yes':
             continue
@@ -69,7 +69,7 @@ def lists(to_do_list):
 # Prints the new list
             print(to_do_list)
 # Asks the user is they want to add another item to the list and also gives them the option to remove
-            n = input('Do you want to add something else? (if you want to remove something type the word "remove" ) ').lower()
+            n = input('Do you want to add something else? (yes/no) (if you want to remove something type the word "remove" ) ').lower()
 # If the user wants to keep adding items to the list, the list continues
             if n == 'yes':
                   continue
