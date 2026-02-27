@@ -19,12 +19,23 @@ def remove():
     # Asks the user if they want to remove something from the list
     ans = input('Do you want to remove something? (yes/no) ').lower()
     while ans == 'yes':
-    # While the answer is 'yes', the user is asked to enter what task from the list they want to remove
-        a = input('What would you like to remove?: ') 
+    # While the answer is 'yes', the user is asked to enter what task from the list they want to remove and are reminded to type the task exactly as it is written in the list
+        a = input('What would you like to remove? Type it as it is in the list!: ')
     # Removes the item they enter
         to_do_list.remove(a)
     # Prints the new list
         print(to_do_list)
+    # Function for when the list is empty
+        if not to_do_list:
+    # When the list is empty the user is asked if they want to add something new
+            k = input('List is empty. Do you want to add something? ' ).lower()
+    # If the user wants to add something new, a new function is called
+            if k == 'yes':
+                lists(to_do_list)
+    # If the user doesn't want to add anything new to the list they are congratulated for finishing their tasks and the program ends
+            elif k == 'no':
+                print('Great job. You finished your tasks.')
+                break
     # Asks the user if they want to remove something else or if they want to add something to the list
         n = input('Do you want to remove something else? (if you want to add something say "add") ').lower()
     # If the user wants to keep removing items from the list, the loop continues
@@ -33,11 +44,15 @@ def remove():
     # If the user doesn't want to remove or add anything to the list, the loop is broken and they are told to finish the tasks that their list currently holds
         elif n == 'no':
             print('Ok go on and finish your list of things!')
-            break    
+            break  
     # If the user wants to add something to their list, the loop is broken and a new function is called
         elif n == 'add':
             lists(to_do_list)
             break
+    # While the user doesn't want to remove anything from the list and have also decided not to add anything new, they are told to complete their tasks and the loop is broken
+    while ans == 'no':
+        print('Ok go on and finish your list of things!')
+        break
 
 
 # Defines the function and includes a parameter which is the starter list
@@ -73,9 +88,10 @@ def lists(to_do_list):
 # If the user says yes, the function "remove" is called
          if w == 'yes':
              remove()
-# If the user says no they are told to finish their current tasks and return whenever they would like to update their list
-    elif w == 'no':
-        print("Make sure to finish your current tasks and come back when you finish one to update your list!")
+# If the user says no, they are told to finish the tasks in their list
+         elif w == 'no':
+             print('Ok go on and finish your list of things!')
+
 
 
 # Calls the program and runs it
