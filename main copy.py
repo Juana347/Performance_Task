@@ -38,6 +38,7 @@ def lists(to_do_list):
     if answer == "yes":
         while answer == 'yes':
             a = input('What would you like to add?: ') 
+            to_do_list.append(a)
             print(to_do_list)
             n = input('Do you want to add something else? (yes/no) (if you want to remove something type the word "remove" ) ').lower()
             if n == 'yes':
