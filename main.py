@@ -1,4 +1,4 @@
-# Purpose: A to-do list that let's the user add or remove tasks 
+# Purpose: A to-do list that lets the user add or remove tasks 
 # This performance task was collaborated on 
 
 # Starter List
