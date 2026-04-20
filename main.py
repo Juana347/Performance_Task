@@ -1,5 +1,5 @@
 # Purpose: A to-do list that let's the user add or remove tasks 
-
+# This performance task was collaborated on 
 
 # Starter List
 to_do_list = ["Homework", 'Walk the Dog', 'Wash dishes']
