@@ -1,6 +1,8 @@
 # Purpose: A to-do list that lets the user add or remove tasks 
 # This performance task was collaborated on 
 
+
+## Teammate 3 worked on this 
 # Starter List
 to_do_list = ["Homework", 'Walk the Dog', 'Wash dishes']
 
@@ -14,7 +16,7 @@ def intro():
 intro()
 
 
-
+## Teammates 1 and 2 worked on this 
 def remove():
     # Asks the user if they want to remove something from the list
     ans = input('Do you want to remove something? (yes/no) ').lower()
@@ -55,6 +57,7 @@ def remove():
         break
 
 
+## Teammates 1 and 2 worked on this
 # Defines the function and includes a parameter which is the starter list
 def lists(to_do_list):
 # Asks user if they want to add something to the list 
